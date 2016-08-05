@@ -1,12 +1,20 @@
-﻿<Window x:Class="AEHelper.MainWindow"
+﻿<Controls:MetroWindow x:Class="AEHelper.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:AEHelper"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
-</Window>
+        Height="500" Width="525" ResizeMode="NoResize">
+    <StackPanel>
+        <TextBox x:Name="txtRenderLocation" Controls:TextBoxHelper.ClearTextButton="True" Text="C:\Program Files\Adobe\Adobe After Effects CC 2014\Support Files\aerender.exe" FontSize="25" Margin="5"/>
+        <TextBox x:Name="txtOptionalCommand1" Controls:TextBoxHelper.ClearTextButton="True" Text="-project"  FontSize="25" Margin="5"/>
+        <TextBox x:Name="txtProjectLocation" Controls:TextBoxHelper.ClearTextButton="True" Text="Where is Your Project"  FontSize="25" Margin="5"/>
+        <TextBox x:Name="txtOpionalCommand2" Controls:TextBoxHelper.ClearTextButton="True" Text="-comp Final Comp -output"  FontSize="25" Margin="5"/>
+        <TextBox x:Name="txtOutputLocation" Controls:TextBoxHelper.ClearTextButton="True" Text="Type your output location here."  FontSize="25" Margin="5"/>
+        <Button Style="{StaticResource AccentedSquareButtonStyle}" Margin="5" Click="ButtonBase_OnClick">
+            <TextBlock FontSize="25">Lets Render</TextBlock>
+        </Button>
+        <RichTextBox x:Name="rtxtOutput" Height="100" Margin="5" />
+    </StackPanel>
+</Controls:MetroWindow>
